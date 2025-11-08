@@ -1,0 +1,29 @@
+# backend/app/db.py
+from pymongo import MongoClient
+from app.config import get_settings
+
+settings = get_settings()
+
+_client = None
+_db = None
+
+def get_client():
+    global _client
+    if _client is None:
+        _client = MongoClient(settings.MONGO_URI, serverSelectionTimeoutMS=5000)
+    return _client
+
+def get_db():
+    global _db
+    if _db is None:
+        _db = get_client()[settings.MONGO_DB]
+    return _db
+
+def sessions_collection():
+    return get_db()["sessions"]
+
+def queries_collection():
+    return get_db()["queries"]
+
+def feedback_collection():
+    return get_db()["feedback"]

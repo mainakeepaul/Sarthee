@@ -1,0 +1,5 @@
+2025-11-07 00:26:34,645 INFO sid=24a512f0-8137-471e-a319-02bcc934f877 region=pune query='How to pay property tax in Pune?' confidence=trusted
+2025-11-07 01:14:40,918 INFO Starting ingest for region=pune using pune/sources.json
+2025-11-07 01:14:40,918 INFO Completed ingest stub for pune
+2025-11-07 01:18:26,253 INFO Starting ingest for region=pune using pune/sources.json
+2025-11-07 01:18:26,253 INFO Completed ingest stub for pune
